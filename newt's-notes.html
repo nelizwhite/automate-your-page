@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!-- This is an HTML comment -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="newt-style.css">
+    <title>Newt's Notes</title>
+  </head> 
+  <body>
+    <div class="TOC">
+      <h1> Table of Contents</h1>
+      <ol>
+        <li><a href="#lesson-1">Lesson 1: The Basics of the Web and HTML</a>
+          <ul>
+            <li><a href="#lesson-1-1">How the Web Works</a></li>
+            <li><a href="#lesson-1-2">HTML</a></li>
+            <li><a href="#lesson-1-3">HTML Tags, Elements and Attributes</a></li>
+            <li><a href="#lesson-1-4">Inline vs. Block</a></li>
+            <li><a href="#lesson-1-5">Why Computers are Stupid</a></li>
+          </ul>
+        </li>
+        <li><a href="#lesson-2">Lesson 2: Creating a Structured Document with HTML</a>
+          <ul>
+            <li><a href="#lesson-2-1">HTML vs CSS</a></li>
+            <li><a href="#lesson-2-2">HTML as a Tree Like Structure</a></li>
+            <li><a href="#lesson-2-3">Indented HTML and Boxes</a></li>
+            <li><a href="#lesson-2-4">Text Editors</a></li>
+          </ul>
+        </li>
+        <li><a href="#lesson-3">Lesson 3: Adding HTML to CSS</a>
+          <ul>
+            <li><a href="#lesson-3-1">The Importance of Avoiding Repetition</a></li>
+            <li><a href="#lesson-3-2">CSS</a></li>
+          </ul> 
+        </li>
+        <li><a href="#lesson-4">Lesson 4: Introduction to "Serious" Programming</a>
+          <ul>
+            <li><a href="#lesson-4-1">Computer</a></li>
+            <li><a href="#lesson-4-2">Computer Programs</a></li>
+            <li><a href="#lesson-4-3">Programming Language</a></li>
+            <li><a href="#lesson-4-4">Python</a></li>
+            <li><a href="#lesson-4-5">Grammar</a></li>
+            <li><a href="#lesson-4-6">Python Expressions</a></li>
+          </ul>
+        <li><a href="#lesson-5">Lesson 5: Variables and Strings</a>
+          <ul>
+            <li><a href="#lesson-5-1">A Variable in Python</a></li>
+            <li><a href="#lesson-5-2">What = means in Python</a></li>
+            <li><a href="#lesson-5-3">How are Variables Useful?</a></li>
+            <li><a href="#lesson-5-4">String vs. Number</a></li>
+          </ul>
+        <li><a href="#lesson-6">Lesson 6: Input->Function->Output</a></li>
+          <ul>
+            <li><a href="#lesson-6-1">Function</a></li>
+            <li><a href="#lesson-6-2">Making vs. Using a Function</a></li>
+            <li><a href="#lesson-6-3">The Importance of Functions</a></li>
+          </ul>
+        <li><a href="#lesson-7">Lesson 7: Decisions and Repetitions: If and While</a></li>
+          <ul>
+            <li><a href="#lesson-7-1">Boolean Value</a></li>
+            <li><a href="#lesson-7-2">If Statements</a></li>
+            <li><a href="#lesson-7-3">While Loops</a></li>
+            <li><a href="#lesson-7-4">Break Statement</a></li>
+          </ul>
+        </li>
+        <li><a href="#lesson-8">Lesson 8: Structured Data: Lists and For Loops</a></li>
+          <ul>
+            <li><a href="#lesson-8-1">Lists</a></li>
+            <li><a href="#lesson-8-2">Nested Lists</a></li>
+            <li><a href="#lesson-8-3">Mutation and Aliasing</a></li>
+            <li><a href="#lesson-8-4">List Operations</a></li>
+            <li><a href="#lesson-8-5">Index Methods</a></li>
+            <li><a href="#lesson-8-6">For Loop</a></li>
+          </ul>
+        </li>
+      </ol>
+    </div>          
+    
+    <h1>Key Concepts</h1>
+    
+    <div class="lesson">
+      <h2 id="lesson-1">Lesson 1: The Basics of the Web and HTML</h2>
+      <div class="concept" id="lesson-1-1">
+        <div class="concept-title">
+         How the Web Works
+        </div>
+        <div class="concept-description">
+         <p>    
+          SERVERS host massive amounts of information. The internet is the platform by which individuals can access this information from their <em>browsers.</em> When an inidividual types in a search into their browser, their computer sends an <em>HTTP request</em> to a server. The server then identifies the corresponding HTML document and relays it to the individual's web browser, which interprets the page and displays it on the user's screen. <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/e-48329854/m-48480496"> Click here</a> for a video that explains this process in detail.
+         </p>
+       </div>
+      </div>
+      <div class="concept" id="lesson-1-2">
+        <div class="concept-title">
+          HTML
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML, or Hypertext Markeup Language, is the <b>glue</b> that holds everything together and is the <em>main protocol of the web.</em> An HTML document contains text content and markup (tags/attributes that modify how the text looks.) <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48724340">This video</a> gives a good overview of HTML.
+          </p>
+        </div>
+      </div>
+      <div class="concept" id="lesson-1-3">
+        <div class="concept-title">
+        HTML Tags, Elements and Attributes
+        </div>
+        <div class="concept-description">
+          <p>
+            An HTML document is made up of HTML elements. An element is defined as everything within a set of opening and closing tags. The tag tells the browser how to display content. <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48723444">This video</a> goes into detail about the distinction between an element and a tag.             
+            An <b>ATTRIBUTE</b> is a property of an  HTML element. <em>HREF</em> is the <b>attribute</b> used to add a URL link in the anchor tag, for instance. 
+          </p>
+        </div>
+       </div>
+       <div class="concept" id="lesson-1-4">
+        <div class="concept-title">
+            INLINE VS. BLOCK
+        </div>
+        <div class="concept-description">
+         <p>
+          HTML elements are categorized as either inline or block.
+          Block elements form an invisible box around the content. Some examples of inline elements are the p, em, b, h1, h2 (all the way up to h6,) and a tags. Some examples of block elements are the div and span tags.
+         </p>
+        </div>
+       </div>
+       <div class="concept" id="lesson-1-5">
+        <div class="concept-title">
+          WHY COMPUTERS ARE STUPID
+        </div>
+        <div class="concept-description">
+          <p>
+            Computers are stupid because they interpret code literally, leaving little room for small mistakes and typos. Forgetting to add a closing bracket, for instance, can change the way an entire webpage looks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="lesson">
+        <h2 id="lesson-2">Lesson 2: Creating a Structured Document with HTML</h2>
+      <div class="concept" id="lesson-2-1">
+        <div class="concept-title">
+                  HTML vs. CSS
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML and CSS are languages that the browser reads and then turns into a visual representation on the page. HTML controls <b>structure and content</b> and CSS controls <em>style</em>.
+          </p>
+        </div>
+      </div>
+      <div class="concept" id="lesson-2-2">
+        <div class="concept-title">
+             HTML as "tree like structure"
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML is defined as being a tree like structure because elements can have other elements inside of them..thus the concept of <em>inheritence</em>. Embedded elements will inherit the properties of the parent element. When programmers talk about "DOM" they're referring to the structure of a page.
+          </p>
+        </div>
+      </div>
+      <div class="concept" id="lesson-2-3">
+        <div class="concept-title">
+            Indented HTML and Boxes
+        </div>
+        <div class="concept-description">
+          <p>
+            When you read an HTML document, you see a wave of indentations on the left side of the page. The more intended and HTML element is, the more deeply nested its corresponding box is.
+          </p>
+        </div>
+      </div>
+      <div class="concept" id="lesson-2-4">
+        <div class="concept-title">
+           Text Editors
+        </div>
+        <div class="concept-description">
+          <p>
+            Programmers use text editors to write code. These are meant to make the process easier. They will, for instance add the closing tag automatically so that the programmer doesn't have to write it out.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3">Lesson 3: Adding CSS to HTML</h2>
+        <div class="concept" id="lesson-3-1">
+          <div class="concept-title">The Importance of Avoiding Repetition</div>
+          <div class="concept-description">
+            <p>
+              It is important for programmers to avoid repetition for a myriad of reasons. Repetition makes the task of fixing errors all the more tedious and time consuming, as the programmer will have to change the code over and over again. Less repetition means more efficiency. 
+              Also, avoiding repetition helps with code clarity and consistency. By grouping divs into common classes, for intance, the programmer can make <em>one</em> style change that will affect all the corresponding HTML elements as opposed to making the change many times.
+            </p>
+          </div>
+        </div>
+        <div class="concept" id="lesson-3-2">
+          <div class="concept-title">CSS</div>
+          <div class="concept-description">
+            <p>
+              CSS stands for Cascading Style Sheets. CSS allows programmers to add to style to HTML. By assigning a class name to a group of similar HTML elements, style can be applied to all the members of that class.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="lesson">
+        <h2 id="lesson-4">Lesson 4: Introduction to "Serious" Programming"</h2>
+        <div class="concept">
+          <div class="concept-title" id="lesson-4-1">Computer</div>
+          <div class="concept-description">
+            <p>
+              Unlike machines that are built to perform one specific task, computers can be programmed to do an infinite number of things. A programmer can make a computer do anything as long as the computer is given a specific sequence of instructions.
+             </p>
+          </div>
+        </div>
+        <div class="concept">
+          <div class="concept-title" id="lesson-4-2">
+            Computer Program
+          </div>
+          <div class="concept-description">
+            <p>
+              A computer program is a specific sequence of instructions that tells the computer what to do. Some examples of a computer program are web browsers, apps, and games. 
+            </p>
+          </div>
+        </div>
+        <div class="concept">
+          <div class="concept-title" id="lesson-4-3">
+            Programming Language
+          </div>
+          <div class="concept description">
+            <p>
+              A programming laguage is a code that programmers use to tell the computer what to do. Python is one example of a programming language.
+            </p>
+          </div>
+        </div>
+        <div class="concept">
+          <div class="concept-title" id="lesson-4-4">
+            Python
+          </div>
+          <div class="concept-description">
+            <p>
+              Python is a programming language. When you "run" python code, this means that a python interpreter translates it into instructions that the computer understands and can then execute.
+            </p>
+          </div>
+        </div>
+        <div class="concept">
+          <div class="concept-title" id="lesson-4-5">
+            Grammar
+          </div>
+        <div class="concept-description">
+          <p>
+            Python has a specific set of rules that must be followed in order for the interpreter to understand the meaning of the code and then communicate it to the computer.
+            As humans, we have the ability to understand the meaning of a statement that may not be clearly articulated or technically correct. Computers aren't smart enough to do this- the instructions either will or will not be understood by the computer. In short, there is nothing subjective or ambiguous about a programming language; the rules of grammar and syntax are absolute.
+          </p>
+        </div>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-4-6">
+          Python Expressions
+        </div>
+        <div class="concept-description">
+          <p>
+            A python "expression" is a correct statement that the interpreter can understand. (1+1) is a valid expression, while (1+ is not because there is no number after the + or closing parenthesis. <a href="https://www.udacity.com/course/viewer#!/c-ud552-nd/l-3527838955/e-48704311/m-48736065" target="_blank">This video</a> does a good example of explaining what makes a valid python expression versus an invalid one.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="lesson" id="lesson-5">
+      <h2>Lesson 5: Variables and Strings</h2>
+      <div class="concept" id="lesson-5-1">
+        <div class="concept-title">
+          A <em>Variable</em> in Python
+        </div>
+        <div class="concept-description">
+          <p>
+            A variable is value attached to a name. For instance, if we say variable_1 = 1 and then write print my_variable + my_variable, we will get the result 2.
+          </p>
+        </div>
+      </div>
+      <div class="concept" id="lesson-5-2">
+        <div class="concept-title">
+         What = means in Python
+        </div>
+          <div class="concept-description">
+            <p>
+              In Python, the equal sign means "takes the value of," as opposed to "is the same as." 
+            </p>
+          </div>
+        </div>
+        <div class="concept" id="lesson-5-3">
+          <div class="concept-title">
+            How are Variables useful?
+          </div>
+          <div class="concept-description">
+            <p>
+              Variables are useful because:
+               1) They allow programmers to assign names in English and thus improve code readability.
+               2) They allow us to store value
+               3) They allow us to change the value of a variable (i.e. days = days-1)
+            </p>
+          </div>
+        </div>
+        <div class="concept" id="lesson-5-4">
+          <div class="concept-title">
+            String vs Number
+          </div>
+          <div class="concept-description">
+            In Python, 1 is a number whereas "1" is a string. The code 1 + 1 would give 2, whereas "1" + "1" would give the concatenation of the two strings "11."
+          </div>
+        </div>
+        <div class="concept">
+          <div class="concept-title">
+            Finding Strings in Strings
+          </div>
+          <div class="concept-description">
+            To find the location of a sub string within a string, we use the find operator- list.find(value).
+          </div>
+        </div>
+      </div>
+      <div class="lesson" id="lesson-6">
+        <h2>Lesson 6: Input->Function->Output</h2>
+          <div class="concept" id="lesson-6-1">
+            <div class="concept-title">
+              Function
+            </div>
+            <div class="concept-description">
+              <p>
+                A function is a something that receives an input, runs a procedure that does something to the input, and then produces an output. 
+              </p>
+            </div>
+          </div>
+          <div class="concept" id="lesson-6-2">
+            <div class="concept-title">
+              Making vs Using a Function
+            </div>
+            <div class="concept-description">
+              <p>
+                To make a function, you write code that starts with def, followed by the function name and then the set of parameters that will be replaced by values when we eventually run the function. This is followed by the body of the code, which specifies what to do with the input parameters. For instance, the function square(a), where:</br>
+                
+                def square(a):</br>
+                  answer = a * a</br>
+                  return answer</br>
+                
+                will give whatever variable assigned to a, squared. To print the function, we write 
+                print square(a) 
+                This will give the square of whatever value we have assigned to a. 
+
+                It is important to remember to add a return statement, otherwise the function will not produce an output.
+              </p>
+            </div>
+          </div>
+          <div class="concept" id="lesson-6-3">
+            <div class="concept-title">
+              The Importance of Functions
+            </div>
+            <div class="concept-description">
+              <p>
+               Functions are valuable in that they only have to be defined once. As such, they help programmers avoid repetition.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lesson" id="lesson-7">
+          <h2> Lesson 7: Decisions and Repetitions: If and While</h2>
+          <div class="concept" id="lesson-7-1">
+            <div class="concept-title">
+              Boolean Values and Comparison Operators
+            </div>
+            <div class="concept-description">
+              <p>
+                In Python, a Boolean value is a statement that will either return True or False. For instance, "print 1>2" will return False, while "print 2==2" will return True. A Boolean value will always include a comparison operator. These are:
+                < smaller than, > larger than, == equal (because we have already used = to mean assignment,) != not equal, <= smaller than or equal to, >= larger than or equal to. 
+              </p>
+            </div>
+          </div>
+          <div class="concept" id="lesson-7-2">
+            <div class="concept-title">
+              If Statements
+            </div>
+            <div class="concept-description">
+              <p>
+                An If Statement is composed of a test expression and block, where the block is executed when the test expression is true. Example:
+                
+                <p>  
+                    def bigger(a,b):</br>                            
+                      if a>b:</br>                                     
+                        return a</br>                                    
+                      else:</br>
+                        return b
+                </p>
+
+                With the addition of the Or operator, we can have more than one test expression. For instance, in the procedure is_friend we have two test expressions:
+
+                
+                <p>
+                    def is_friend(name):</br>
+                        if name[0] == 'D' or name[0] == 'E':</br>
+                          return True</br>
+                        else:</br>
+                          return False
+                </p>
+
+                This can also be written as:
+
+                
+                def is_friend(name):
+                  return name[0] == 'D' or name[0] == 'E'
+                
+
+                In either case, this function will return "True" where the string name has a first character of 'E' or 'D' and "False" when it does not.
+              </p>
+            </div>
+          </div>
+          <div class="concept" id="lesson-7-3">
+            <div class="concept-title">
+             While Loops
+            </div>
+            <div class="concept-description">
+              <p>
+                A While Loop is similar to an If Statement in the sense that the block will be executed only if the test expression is true. However, while an If Statement will either execute o or 1 time, a While Loop will execute for as long as the test expression is true. This means that a While Loop has the potential to run infinitely.
+                A "counting variable" will change to mean something new each time the block is executed. <a href="https://www.udacity.com/course/viewer#!/c-ud552-nd/l-3555769686/e-48686708/m-48480488">This video</a> does a good job of explaining While Loops. 
+              </p>
+            </div>
+          </div>
+          <div class="concept" id="lesson-7-4">
+            <div class="concept-title">
+             Break Statements
+            </div>
+            <div class="concept-description">
+              <p>
+                If the break test evaluates to true, the while loop will stop and go on to the next statement. <a href="https://www.udacity.com/course/viewer#!/c-ud552-nd/l-3555769686/m-3644799435">This video</a> explains break statements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lesson" id="lesson-8">
+          <h2>Lesson 8: Stuctured Data: Lists and For Loops</h2>
+          <div class="concept" id="lesson-8-1">
+            <div class="concept-title">
+              Lists
+            </div>
+            <div class="concept-description">
+                  Lists are sequences of data which contain an assignment statement and corresponding list of elements. Lists can contain numbers, strings or a combination of both.
+            </div>
+          </div>
+          <div class="concept" id="lesson-8-2">
+            <div class="concept-title">
+                  Nested Lists
+            </div>
+            <div class="concept-description">
+                  Lists can can contain other lists. Like characters in strings, list elements are indexed starting from 0.
+            </div>
+          </div>
+          <div class="concept" id="lesson-8-3">
+            <div class="concept-title">
+                Mutation and Aliasing
+            </div>
+            <div class="concept-description">
+                    Unlike strings, which are immutable, lists can be mutated.
+            </div>
+          </div>
+          <div class="concept" id="lesson-8-4">
+            <div class="concept-title">
+                    List Operations
+            </div>
+            <div class="concept-description">
+                    The append operation adds a new element to the list. This operation is limited to one list element. The += operation appends any number of elements to the list. The + operation does not mutuate the list but will concatenate the two. The len operation, written as len(list), will give the number of elements in the list.
+            </div>
+          </div>
+          <div class="concept" id="lesson-8-5">
+            <div class="concept-title">
+                    Index Methods
+            </div>
+            <div class="concept-description">
+                    list.index(value) will return the first occurence of the value in the list. If the value does not occur, the python interpreter will return error. "value in list" and "value not in list" are boolean values and will tell us whether or not the value is in the list by returning a value of True or False.
+            </div>
+          </div>
+          <div class="concept" id="lesson-8-6">
+            <div class="concept-title">
+                    For Loop
+            </div>
+            <div class="concept-description">
+                    When we write "for name in list", "name" has the value of "each element in list".
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+
+
+
+
